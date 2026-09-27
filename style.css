@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: Arial, sans-serif;
+background: #0a0a0f;
+color: #ffffff;
+line-height: 1.6;
+}
+
+/* =========================
+NAVIGATION
+========================= */
+
+.navbar {
+width: 100%;
+padding: 22px 8%;
+
+```
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+position: fixed;
+top: 0;
+left: 0;
+
+z-index: 1000;
+
+background: rgba(10, 10, 15, 0.90);
+backdrop-filter: blur(10px);
+```
+
+}
+
+.logo {
+font-size: 28px;
+font-weight: bold;
+}
+
+.logo span {
+colo
