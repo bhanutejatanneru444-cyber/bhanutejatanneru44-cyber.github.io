@@ -1,3 +1,7 @@
+/* =========================================
+RESET
+========================================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -9,41 +13,63 @@ scroll-behavior: smooth;
 }
 
 body {
-font-family: Arial, sans-serif;
-background: #0a0a0f;
+font-family: Arial, Helvetica, sans-serif;
+background: #07070b;
 color: #ffffff;
 line-height: 1.6;
+overflow-x: hidden;
+transition: background 0.4s ease, color 0.4s ease;
 }
 
-/* =========================
-NAVIGATION
-========================= */
+a {
+color: inherit;
+text-decoration: none;
+}
 
-.navbar {
-width: 100%;
-padding: 22px 8%;
+button {
+font-family: inherit;
+}
 
-```
-display: flex;
-justify-content: space-between;
-align-items: center;
+/* =========================================
+ANIMATED BACKGROUND
+========================================= */
 
+.background {
 position: fixed;
-top: 0;
-left: 0;
-
-z-index: 1000;
-
-background: rgba(10, 10, 15, 0.90);
-backdrop-filter: blur(10px);
-```
-
+inset: 0;
+overflow: hidden;
+z-index: -2;
+background: #07070b;
 }
 
-.logo {
-font-size: 28px;
-font-weight: bold;
+.blob {
+position: absolute;
+width: 450px;
+height: 450px;
+border-radius: 50%;
+filter: blur(100px);
+opacity: 0.16;
+animation: float 12s infinite alternate ease-in-out;
 }
 
-.logo span {
-colo
+.blob-one {
+background: #7c3aed;
+top: -150px;
+left: -100px;
+}
+
+.blob-two {
+background: #2563eb;
+right: -150px;
+top: 25%;
+animation-delay: 2s;
+}
+
+.blob-three {
+background: #db2777;
+bottom: -200px;
+left: 35%;
+animation-delay: 4s;
+}
+
+@keyfra
