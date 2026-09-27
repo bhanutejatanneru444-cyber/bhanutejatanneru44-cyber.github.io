@@ -1,75 +1,81 @@
-// ===============================
-// PORTFOLIO JAVASCRIPT
-// ===============================
+/* =========================================
+PORTFOLIO JAVASCRIPT
+========================================= */
 
-console.log("Portfolio website loaded successfully!");
+/* =========================================
+TYPING ANIMATION
+========================================= */
 
-// ===============================
-// SMOOTH SCROLLING
-// ===============================
+const typingElement = document.getElementById("typing");
 
-document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+const words = [
+"Developer",
+"BTech Student",
+"Python Learner",
+"AI Enthusiast",
+"Problem Solver"
+];
+
+let wordIndex = 0;
+let characterIndex = 0;
+let deleting = false;
+
+function typeEffect() {
 
 ```
-link.addEventListener("click", function (event) {
+const currentWord = words[wordIndex];
 
-    event.preventDefault();
+if (!deleting) {
 
-    const target = document.querySelector(
-        this.getAttribute("href")
-    );
+    typingElement.textContent =
+        currentWord.substring(
+            0,
+            characterIndex + 1
+        );
 
-    if (target) {
+    characterIndex++;
 
-        target.scrollIntoView({
-            behavior: "smooth"
-        });
+    if (characterIndex === currentWord.length) {
 
+        deleting = true;
+
+        setTimeout(typeEffect, 1500);
+
+        return;
     }
-
-});
-```
-
-});
-
-// ===============================
-// NAVBAR SCROLL EFFECT
-// ===============================
-
-window.addEventListener("scroll", function () {
-
-```
-const navbar = document.querySelector(".navbar");
-
-if (window.scrollY > 50) {
-
-    navbar.style.background =
-        "rgba(10, 10, 15, 0.97)";
 
 } else {
 
-    navbar.style.background =
-        "rgba(10, 10, 15, 0.90)";
+    typingElement.textContent =
+        currentWord.substring(
+            0,
+            characterIndex - 1
+        );
+
+    characterIndex--;
+
+    if (characterIndex === 0) {
+
+        deleting = false;
+
+        wordIndex++;
+
+        if (wordIndex >= words.length) {
+            wordIndex = 0;
+        }
+
+    }
 
 }
-```
 
-});
-
-// ===============================
-// CURRENT YEAR
-// ===============================
-
-const yearElement = document.querySelector("footer p");
-
-if (yearElement) {
-
-```
-const currentYear = new Date().getFullYear();
-
-yearElement.innerHTML =
-    "© " + currentYear +
-    " Bhanu. Built with HTML, CSS & JavaScript.";
+setTimeout(
+    typeEffect,
+    deleting ? 60 : 100
+);
 ```
 
 }
+
+typeEffect();
+
+/* =========================================
