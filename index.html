@@ -7,7 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 ```
-<title>Bhanu | Portfolio</title>
+<meta name="description"
+    content="Bhanu's personal developer portfolio">
+
+<title>Bhanu | Developer Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
 ```
@@ -17,96 +20,132 @@
 <body>
 
 ```
+<!-- Animated Background -->
+<div class="background">
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="blob blob-three"></div>
+</div>
+
+
 <!-- Navigation -->
-<nav class="navbar">
+<header class="navbar">
 
-    <div class="logo">
+    <a href="#home" class="logo">
         Bhanu<span>.</span>
-    </div>
+    </a>
 
-    <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+    <nav>
 
-</nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
 
+    </nav>
 
-<!-- HOME -->
-<section id="home" class="hero">
+    <button id="theme-toggle" class="theme-button">
+        ☀️
+    </button>
 
-    <div class="hero-content">
-
-        <p class="small-text">HELLO, I'M</p>
-
-        <h1>Bhanu</h1>
-
-        <h2>
-            BTech Student & <span>Developer</span>
-        </h2>
-
-        <p class="hero-description">
-            I enjoy building websites, applications and practical
-            projects while continuously learning new technologies.
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="#projects" class="btn primary-btn">
-                View My Projects
-            </a>
-
-            <a href="#contact" class="btn secondary-btn">
-                Contact Me
-            </a>
-
-        </div>
-
-    </div>
+</header>
 
 
-    <div class="hero-card">
+<!-- =========================
+     HERO
+========================== -->
 
-        <div class="profile-circle">
-            B
-        </div>
+<main>
 
-        <h3>Future Software Developer</h3>
+    <section id="home" class="hero">
 
-        <p>
-            Learning • Building • Improving
-        </p>
+        <div class="hero-content">
 
-    </div>
-
-</section>
-
-
-<!-- ABOUT -->
-<section id="about" class="section">
-
-    <div class="section-title">
-
-        <p>GET TO KNOW ME</p>
-
-        <h2>About Me</h2>
-
-    </div>
-
-
-    <div class="about-content">
-
-        <div class="about-text">
-
-            <p>
-                I'm a BTech student interested in software development,
-                web development and artificial intelligence.
+            <p class="hero-small">
+                👋 HELLO, I'M
             </p>
 
-            <p>
-                I like learning by building projects rather than only
-                studying theory. My goal is to develop strong technical
+            <h1>
+                Bhanu
+            </h1>
+
+            <h2>
+                I'm a
+                <span id="typing"></span>
+            </h2>
+
+            <p class="hero-description">
+
+                A BTech student passionate about building
+                useful digital experiences, learning new
+                technologies and turning ideas into projects.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="button primary">
+                    View Projects
+                </a>
+
+                <a href="#contact" class="button secondary">
+                    Contact Me
+                </a>
+
+            </div>
+
+
+            <div class="social-links">
+
+                <a href="#" target="_blank">
+                    GitHub
+                </a>
+
+                <a href="#" target="_blank">
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Hero Visual -->
+
+        <div class="hero-visual">
+
+            <div class="code-window">
+
+                <div class="window-top">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+                <div class="code">
+
+                    <p>
+                        <span class="purple">const</span>
+                        developer =
+                        <span class="blue">{
+                    </p>
+
+                    <p class="indent">
+                        name:
+                        <span class="green">
+                            "Bhanu"
+                        </span>,
+                    </p>
+
+                    <p class="indent">
+                        role:
+                        <span class="green">
+                            "Developer"
+                        </span>,
+                    </p>
 ```
